@@ -38,11 +38,8 @@ project "GLFW"
             "src/osmesa_context.c"
         }
 
-        defines 
-        { 
-            "_GLFW_WIN32",
-            "_CRT_SECURE_NO_WARNINGS"
-        }
+	filter "system:windows"
+        defines { "_GLFW_WIN32", "_CRT_SECURE_NO_WARNINGS" }
 
 
     filter "configurations:Debug"
